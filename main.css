@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 @font-face {
@@ -116,10 +115,10 @@ img {
     width: 100%;
     display: flex;
     justify-content: center;
-    position: sticky;
-    z-index: -1;
+    position: relative;
+    z-index: 0;
     height: 82vh;
-    background-attachment: fixed;
+    overflow: hidden;
 }
 
 .image-container::before {
@@ -185,17 +184,19 @@ img {
     justify-content: center;
     color: #FFC72C;
     width: 100%;
-    height: 120vh;
+    min-height: 100vh;
+    height: auto;
     overflow: visible;
     position: relative;
     z-index: 1;
+    padding: 80px 20px;
 }
 
 .contact-form-section {
     width: 100%;
     padding-top: 100px;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow: visible;
 }
 
 form {
